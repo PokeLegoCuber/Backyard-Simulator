@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Backyard Simulator</title>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+<body>
+	<a-scene>
+		<a-assets>
+			<!-- BackGround Music -->
+			<!-- <audio id = "bg_music"src="asset/audio/carefree.mp3" type="audio/mpeg"preload="auto" autoplay="true" loop = "true"></audio>  -->
+			<!-- Background -->
+    		<img id="sky" src="asset/image/background.jpeg">
+    		<!-- Person Assets -->
+    		<a-asset-item id = "bruce_lee" src = "asset/model/person/bruce_lee.gltf"></a-asset-item>
+    		<a-asset-item id = "gnome_chef" src = "asset/model/person/gnome_chef.gltf"></a-asset-item>
+    		<a-asset-item id="goose" src="asset/model/person/goose.gltf"></a-asset-item>
+    		<a-asset-item id = "hot_dawg" src = "asset/model/person/hot_dawg.gltf"></a-asset-item>
+    		<a-asset-item id = "jackie_chan" src = "asset/model/person/jackie_chan.gltf"></a-asset-item>
+    		<a-asset-item id = "repaired_chef" src = "asset/model/person/repaired_chef.gltf"></a-asset-item>
+    		<a-asset-item id = "repaired_darth" src = "asset/model/person/repaired_darth.gltf"></a-asset-item>
+    		<a-asset-item id = "swedish_chef" src = "asset/model/person/swedish_chef.gltf"></a-asset-item>
+    		<!-- Food Assets -->
+    		<a-asset-item id = "bacon_cheeseburger" src = "asset/model/food/bacon_cheeseburger.gltf"></a-asset-item>
+    		<a-asset-item id = "burger_patty" src = "asset/model/food/burger_patty.gltf"></a-asset-item>
+    		<a-asset-item id = "droopburger" src = "asset/model/food/droopburger.gltf"></a-asset-item>
+    		<a-asset-item id = "hamburger" src = "asset/model/food/hamburger.gltf"></a-asset-item>
+    		<a-asset-item id = "hot_dog" src = "asset/model/food/hot_dog.gltf"></a-asset-item>
+    		<a-asset-item id = "pickle" src = "asset/model/food/pickle.gltf"></a-asset-item>
+    		<a-asset-item id = "taco1" src = "asset/model/food/taco1.gltf"></a-asset-item>
+    		<a-asset-item id = "taco2" src = "asset/model/food/taco2.gltf"></a-asset-item>
+    		<!-- Object Assets -->
+    		<a-asset-item id = "grill1" src = "asset/model/object/grill1.gltf"></a-asset-item>
+    		<a-asset-item id = "grill2" src = "asset/model/object/grill2.gltf"></a-asset-item>
+    		<a-asset-item id = "grill3" src = "asset/model/object/grill3.gltf"></a-asset-item>
+    		<a-asset-item id = "hydrodynamic_spatula" src = "asset/model/object/hydrodynamic_spatula.gltf"></a-asset-item>
+  		</a-assets>
+
+		<a-sky src = "#sky"></a-sky>
+		<!-- Oculus Controls? -->
+		<!-- <a-entity oculus-touch-controls="hand: left"></a-entity>
+		<a-entity oculus-touch-controls="hand: right"></a-entity> -->
+      	<a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      	<!-- Goose -->
+		<a-gltf-model src="#goose" rotation="-90 90 0" scale = "0.0075 0.0075 0.0075" position="-1.5 0 -5"></a-gltf-model>
+		<!-- Burger Patty -->
+		<a-gltf-model src="#burger_patty" rotation="-90 0 0" scale = "0.0025 0.0025 0.0025" position="-1.268 0.889 -4.967"></a-gltf-model>
+
+		<!-- Bruce Lee -->
+		<a-gltf-model src="#bruce_lee" rotation="-90 -90 0" scale = "0.02 0.02 0.02" position="5 0 0"></a-gltf-model>
+		<!-- Hot Dog -->
+		<a-gltf-model src="#hot_dog" rotation="-90 180 0" scale = "0.005 0.005 0.005" position="4.693 2.070 0.033"></a-gltf-model>
+		<!-- Other Bruce Lee -->
+		<a-gltf-model src="#bruce_lee" rotation="-90 -90 0" scale = "0.02 0.02 0.02" position="5 0 -1"></a-gltf-model>
+		<!-- DroopBurger -->
+		<a-gltf-model src="#droopburger" rotation="-90 90 0" scale = "0.005 0.005 0.005" position="4.979 2.027 -0.516"></a-gltf-model>
+
+
+		<!-- Grill 2-->
+		<a-gltf-model src="#grill2" rotation="-90 90 0" scale = "0.025 0.025 0.025" position="0 0 -5"></a-gltf-model>
+		<!-- Burger Patties -->
+		<a-gltf-model src="#burger_patty" rotation="-90 0 0" scale = "0.0025 0.0025 0.0025" position="0.05 1.1 -5"></a-gltf-model>
+		<a-gltf-model src="#burger_patty" rotation="-90 0 0" scale = "0.0025 0.0025 0.0025" position="0.25 1.1 -5"></a-gltf-model>
+		<a-gltf-model src="#burger_patty" rotation="-90 0 0" scale = "0.0025 0.0025 0.0025" position="-0.20 1.1 -5"></a-gltf-model>
+		<a-gltf-model src="#burger_patty" rotation="-90 0 0" scale = "0.0025 0.0025 0.0025" position="-0.40 1.1 -5"></a-gltf-model>
+		<!-- HamBurger -->
+		<a-gltf-model src="#hamburger" rotation="90 0 0" scale = "0.5 0.5 0.5" position="0.979 1.343 -5.064"></a-gltf-model>
+		<!-- Hot Dawg -->
+		<a-gltf-model src="#hot_dawg" rotation="-90 0 -45" scale = "0.0025 0.0025 0.0025" position="2 0 -5"></a-gltf-model>
+
+		<!-- Grill 1 -->
+		<a-gltf-model src="#grill1" rotation="-90 90 0" scale = "0.0075 0.0075 0.0075" position="-5 0 0"></a-gltf-model>
+		<!-- Chef -->
+		<a-gltf-model src="#repaired_chef" rotation="-90 90 45" scale = "0.035 0.035 0.035" position="-6.435 -0.195 1.754"></a-gltf-model>
+		<!-- Hydrodynamic Spatula -->
+		<a-gltf-model src="#hydrodynamic_spatula" rotation="-90 90 45" scale = "0.0035 0.0035 0.0035" position="-4.117 1 1.659"></a-gltf-model>
+		<!-- Darth Chef -->
+		<a-gltf-model src="#repaired_darth" rotation="-90 90 -45" scale = "0.035 0.035 0.035" position="-5.476 -0.195 -0.698"></a-gltf-model>
+
+		<!-- Grill 3 -->
+		<a-gltf-model src="#grill3" rotation="-90 0 180" scale = "0.75 0.75 0.75" position="4.965 -1.878 5.832"></a-gltf-model>
+		<!-- Swedish Chef -->
+		<a-gltf-model src="#swedish_chef" rotation="-90 0 180" scale = "0.025 0.025 0.025" position="0.217 1.632 5.036"></a-gltf-model>
+		<!-- Taco1 -->
+		<a-gltf-model src="#taco1" rotation="-90 0 0" scale = "0.005 0.005 0.005" position="-0.292 1.853 4.633"></a-gltf-model>
+		<!-- Pickle Rick -->
+		<a-gltf-model src="#pickle" rotation="180 45 0" scale = "0.025 0.025 0.025" position="4.919 0.403 5.500"></a-gltf-model>
+		<!-- Taco2 -->
+		<a-gltf-model src="#taco2" rotation="-90 0 0" scale = "0.05 0.05 0.05" position="3.897 1.781 4.994"></a-gltf-model>
+
+
+		<!-- <a-entity sound="src: #bg_music"></a-entity> -->
+	</a-scene>
+	<!-- <a-gltf-model src="#" rotation="0 0 0" scale = "1 1 1" position="0 0 -4"></a-gltf-model> -->
+</body>
+</html>
